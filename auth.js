@@ -35,8 +35,10 @@ signupForm.addEventListener('submit',(e)=>{
         // const modal =document.querySelector('#signupModal');
         signupForm.reset();
         signupForm.querySelector('.error').innerHTML="signed in successfully";
+        setTimeout("location.reload(true);", 5);
     }).catch( error =>{
         // console.log(error);
+        
         signupForm.reset();
         signupForm.querySelector('.error').innerHTML=error.message;
         
@@ -62,6 +64,7 @@ loginForm.addEventListener('submit',(e)=>{
         loginForm.querySelector('.error').innerHTML="logged in successfully";
         // const modal =document.querySelector('#loginModal');
         loginForm.reset();
+        setTimeout("location.reload(true);", 5);
     }).catch( error =>{
         // console.log(error);
         loginForm.reset();
