@@ -98,6 +98,7 @@ Comment.addEventListener('submit', (e) => {
             // console.log(user.email);
             db.collection('Comments').doc(uid).set(ans).then(() => {
                 console.log("comment added successfully");
+                setTimeout("location.reload(true);", 0.1);
             }).catch(error => {
                 console.log("error occured", e);
             })
@@ -119,7 +120,7 @@ const showComment=function() {
         data.docs.forEach(element => {
             const ele = element.data();
             divElement.append('<p>'+  ele.comment + '</p>');
-            divElement.append('<p>'+"-" + ele.name + '</p>');
+            divElement.append('<p class="float-right">'+"-" + ele.name + '</p>'+'<br>');
 
         });
         $('.todo').append(divElement);
