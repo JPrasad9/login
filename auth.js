@@ -1,7 +1,7 @@
 auth.onAuthStateChanged(user => {
     if (user) {
         console.log(user.email);
-        document.getElementById("status").innerHTML = "Hello..  "+user.email;
+        // document.getElementById("status").innerHTML = "Hello..  "+user.email;
         console.log("user logged in");
         setupUI(user);
     } else {
