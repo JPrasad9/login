@@ -55,6 +55,7 @@ const logout = document.querySelector('#log-out');
 logout.addEventListener('click', (e) => {
     e.preventDefault();
     auth.signOut().then(() => {
+        document.getElementById("status").innerHTML = "Logged out Thanks for spending some quality time with the Web site today. Log in again"
         console.log("signout successfully");
     })
 })
